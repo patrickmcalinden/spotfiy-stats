@@ -1,14 +1,18 @@
+//Since using implicit grant...data gets shared through redirect link
+
+//takes data from address bar and extract necessary info 
 function loadData(){
     var hash = window.location.hash.substr(1);
     var params = hash.split("&");
+    //taking seperated statments spliting them at "=" and storing left as key and right as value
     var splitParams = params.reduce((accumulator,currentValue) => {
         var [key, value] = currentValue.split("=");
         accumulator[key] = value;
         return accumulator;
-        
     }, {});
     return splitParams;
 }
+//taking data from loading and saving into local storage (nothing account sensitive)
 function saveData(){
     var tokenData = loadData();
     if (tokenData == null){
@@ -21,16 +25,20 @@ function saveData(){
         localStorage.setItem("expiresIn", expires_in);
     }
 }
+//Sennding first api request to get basic user info (for greeting)
 async function getUserId(){
     var accessToken = localStorage.getItem("accessToken");
     const spotifyEndPoint = "https://api.spotify.com/v1/me";
+    //sending proper request params
     const result = await fetch(spotifyEndPoint , {
         method: 'Get',
         headers:   {'Authorization' : 'Bearer ' + accessToken}
     });
+    //parse though recieved JSON and display correct info
     const userId =  await result.json();
     document.getElementById("username").innerText = userId.display_name;
 }
+//All other funcitons follow same format...only params in spotifyEndPoint are different
 async function getTopArtistMonth(){
     var accessToken = localStorage.getItem("accessToken");
     const spotifyEndPoint = "https://api.spotify.com/v1/me/top/artists?time_range=short_term&limit=1&offset=0";
@@ -115,7 +123,7 @@ async function getTopTrackYear(){
     document.getElementById("track-artist-year").innerText = topTrackYear.items[0].artists[0].name;
     return topTrackYear;
 }
-
+//testing function response
 window.onload = function(){
     loadData();
     saveData();
