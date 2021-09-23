@@ -1,0 +1,1 @@
+A site built with Bootstrap and JS that returns a user’s Spotify stats. Stats are retrieved via Spotify's API and are displayed in a dashboard manner. Displayed stats include “Top Song” and “Top Artist”. Each data set is broken down into weekly, half-year, and yearly ranges.
