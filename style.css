@@ -1,11 +1,15 @@
 .title{
-    width: 100%;
+    text-align: end;
 }
+
 .card-start{
     background: rgb(41, 40, 44);
     padding: 1.5em;
     border-radius: 2%;
     transition:0.5s;
+    max-width: 360px;
+    min-width: 300px;
+
 }
 .card-start img{
     clip-path: circle();
@@ -18,7 +22,15 @@
     padding: 1.5em;
     border-radius: 2%;
     transition:0.5s;
-    height: 449px;
+    height: 460px;
+    min-width: 315px;
+    max-width: 350px
+}
+.card-track img{
+    padding: 1em;
+    min-width: 200px;
+    max-width: 300px;
+
 }
 
 .click{
