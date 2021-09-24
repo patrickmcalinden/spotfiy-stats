@@ -21,4 +21,4 @@ Overall, building this website was quick. The focus was using JavaScript and not
 This project has allowed me to brush up on my JavaScript skills before expanding my knowledge.
  
 <h3>Future Commits</h3>
-09/24/21 - Work on error handling and add some system to auto refresh tokens 
+09/24/21 - Work on error handling and add some system to auto refresh tokens -ongoing
