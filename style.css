@@ -1,3 +1,9 @@
+.greeting span{
+    display: inline-block;
+}
+.scroll-down-indicator{
+    display: inline-block;
+}
 .title{
     text-align: end;
 }
@@ -46,4 +52,21 @@
 #by{
     margin-top: -.55em;
     margin-bottom: -.55em;
+}
+
+.scroll-down-indicator{
+    animation: wordAnim 0.9s infinite alternate;
+    animation-delay: 2s;
+    animation-iteration-count: 10;
+  }
+  @keyframes wordAnim{
+    from{
+      transform: translateY(0px);
+      z-index: 5;
+    }
+    to{
+      transform: translateY(25px);
+    }
+  
+  }
 }

@@ -48,7 +48,7 @@ async function getTopArtistMonth(){
     });
     const topArtistMonth= await result.json();
     document.getElementsByTagName("img")[0].src = topArtistMonth.items[0].images[1].url;
-    document.getElementsByTagName("a")[0].href = topArtistMonth.items[0].external_urls.spotify;
+    document.getElementsByTagName("a")[2].href = topArtistMonth.items[0].external_urls.spotify;
     document.getElementById("artist-name-month").innerText = topArtistMonth.items[0].name;
     document.getElementById("artist-genre-month").innerText = topArtistMonth.items[0].genres[0];
     return topArtistMonth;
@@ -62,7 +62,7 @@ async function getTopArtistSix(){
     });
     const topArtistSix= await result.json();
     document.getElementsByTagName("img")[1].src = topArtistSix.items[0].images[1].url;
-    document.getElementsByTagName("a")[1].href = topArtistSix.items[0].external_urls.spotify;
+    document.getElementsByTagName("a")[3].href = topArtistSix.items[0].external_urls.spotify;
     document.getElementById("artist-name-6month").innerText = topArtistSix.items[0].name;
     document.getElementById("artist-genre-6month").innerText = topArtistSix.items[0].genres[0];
     return topArtistSix;
@@ -76,7 +76,7 @@ async function getTopArtistYear(){
     });
     const topArtistYear= await result.json();
     document.getElementsByTagName("img")[2].src = topArtistYear.items[0].images[1].url;
-    document.getElementsByTagName("a")[2].href = topArtistYear.items[0].external_urls.spotify;
+    document.getElementsByTagName("a")[4].href = topArtistYear.items[0].external_urls.spotify;
     document.getElementById("artist-name-year").innerText = topArtistYear.items[0].name;
     document.getElementById("artist-genre-year").innerText = topArtistYear.items[0].genres[0];
     return topArtistYear;
@@ -90,7 +90,7 @@ async function getTopTrackMonth(){
     });
     const topTrackMonth= await result.json();
     document.getElementsByTagName("img")[3].src = topTrackMonth.items[0].album.images[1].url;
-    document.getElementsByTagName("a")[3].href = topTrackMonth.items[0].external_urls.spotify;
+    document.getElementsByTagName("a")[5].href = topTrackMonth.items[0].external_urls.spotify;
     document.getElementById("track-name-month").innerText = topTrackMonth.items[0].name;
     document.getElementById("track-artist-month").innerText = topTrackMonth.items[0].artists[0].name;
     return topTrackMonth;
@@ -104,7 +104,7 @@ async function getTopTrackSix(){
     });
     const topTrackSix= await result.json();
     document.getElementsByTagName("img")[4].src = topTrackSix.items[0].album.images[1].url;
-    document.getElementsByTagName("a")[4].href = topTrackSix.items[0].external_urls.spotify;
+    document.getElementsByTagName("a")[6].href = topTrackSix.items[0].external_urls.spotify;
     document.getElementById("track-name-six").innerText = topTrackSix.items[0].name;
     document.getElementById("track-artist-six").innerText = topTrackSix.items[0].artists[0].name;
     return topTrackSix;
@@ -118,7 +118,7 @@ async function getTopTrackYear(){
     });
     const topTrackYear= await result.json();
     document.getElementsByTagName("img")[5].src = topTrackYear.items[0].album.images[1].url;
-    document.getElementsByTagName("a")[5].href = topTrackYear.items[0].external_urls.spotify;
+    document.getElementsByTagName("a")[7].href = topTrackYear.items[0].external_urls.spotify;
     document.getElementById("track-name-year").innerText = topTrackYear.items[0].name;
     document.getElementById("track-artist-year").innerText = topTrackYear.items[0].artists[0].name;
     return topTrackYear;
