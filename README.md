@@ -3,7 +3,6 @@
  Dummy Account info:
  
  email: knowspotifystats@gmail.com
- 
  password: SpotifyStats
 
 <h3>Project Roots</h3>
