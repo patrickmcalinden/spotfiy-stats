@@ -1,6 +1,6 @@
 <h1>Spotify Stats<h1>
  <h3>Don't Want To Sign-In With Your Account?</h3>
- Dummy Account info:
+ Dummy Account info: (currently populating data)
 
  email: knowspotifystats@gmail.com
 
