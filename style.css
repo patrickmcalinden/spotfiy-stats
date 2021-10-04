@@ -19,6 +19,7 @@
 }
 .card-start img{
     clip-path: circle();
+    object-fit: cover;
     margin-top: -1.5em;
     width: 240px;
     height: 320px;
@@ -65,7 +66,7 @@
       z-index: 5;
     }
     to{
-      transform: translateY(10px);
+      transform: translateY(20px);
     }
   
   }
