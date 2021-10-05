@@ -12,17 +12,19 @@ function loadData(){
     }, {});
     return splitParams;
 }
-//taking data from loading and saving into local storage (nothing account sensitive)
+//taking data from loading and saving into local storage (nothing account sensitive)...and making sure there is data to be loaded...if not user is sent back to login page (fixes issues of expired tokens)
 function saveData(){
     var tokenData = loadData();
-    if (tokenData == null){
-        alert('Token Data not Found! Please Log In With Spotify!');
-    }else{
+    console.log(tokenData.hasOwnProperty('access_token'));
+    if (tokenData.hasOwnProperty('access_token')){
         const {access_token, token_type, expires_in} = tokenData;
         localStorage.clear();
         localStorage.setItem("accessToken", access_token);
         localStorage.setItem("tokenType", token_type);
         localStorage.setItem("expiresIn", expires_in);
+    }else{
+        alert('Token Data not Found! Please Log In With Spotify!');
+        window.location = 'https://accounts.spotify.com/en/authorize?client_id=ffd460a77ebb49b5a874ff0008cfada0&redirect_uri=https:%2F%2Fpatrickmcalinden.github.io%2Fspotfiy-stats%2Fstats.html&scope=user-top-read&response_type=token&show_dialog=true';
     }
 }
 //Sennding first api request to get basic user info (for greeting)
