@@ -88,7 +88,7 @@ ScrollTrigger.matchMedia({
                 stagger: .5,
                 })
         },
-        "(min-width: 350px)" : function()
+        "(max-width: 1049px)" : function()
         {
             gsap.from(".content1" , {
                 scrollTrigger: {
