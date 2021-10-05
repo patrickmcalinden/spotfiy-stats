@@ -88,5 +88,62 @@ ScrollTrigger.matchMedia({
                 stagger: .5,
                 })
         },
-
+        "(min-width: 350px)" : function()
+        {
+            gsap.from(".content1" , {
+                scrollTrigger: {
+                trigger: '.content1',
+                start: "top 50%",
+                },
+                opacity: 0,
+                duration: 1,
+                stagger: .5,
+                })
+            gsap.from(".content2" , {
+                scrollTrigger: {
+                trigger: '.content2',
+                start: "top 70%",
+                },
+                opacity: 0,
+                duration: 1,
+                stagger: .5,
+                })
+            gsap.from(".content3" , {
+                scrollTrigger: {
+                trigger: '.content3',
+                start: "top 50%",
+                },
+                opacity: 0,
+                duration: 1,
+                stagger: .5,
+                })
+            
+            gsap.from(".content4" , {
+                scrollTrigger: {
+                trigger: '.content4',
+                start: "top 50%",
+                },
+                opacity: 0,
+                duration: 1,
+                stagger: .5,
+                })
+            gsap.from(".content5" , {
+                scrollTrigger: {
+                trigger: '.content5',
+                start: "top 50%",
+                },
+                opacity: 0,
+                duration: 1,
+                stagger: .5,
+                })
+            gsap.from(".content6" , {
+                scrollTrigger: {
+                trigger: '.content6',
+                start: "top 70%",
+                },
+                opacity: 0,
+                duration: 1,
+                stagger: .5,
+                })
+        }
 })
